@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mitra Usaha</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-orange">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-building"></i> Mitra Usaha
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-4">
+        <div class="container">
+            <h1 class="fw-bold text-white mb-0">Hubungi Kami</h1>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Kirim Pesan</h3>
+                            <form id="contactForm" onsubmit="submitForm(event)">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Nama Lengkap *</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">No. Telepon *</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="subject" class="form-label">Subjek *</label>
+                                        <select class="form-select" id="subject" required>
+                                            <option value="">Pilih Subjek</option>
+                                            <option value="jual">Pembelian Produk</option>
+                                            <option value="sewa">Penyewaan Produk</option>
+                                            <option value="info">Informasi Produk</option>
+                                            <option value="lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Pesan *</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-yellow btn-lg">
+                                            <i class="bi bi-send"></i> Kirim Pesan
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
+                                <i class="bi bi-check-circle"></i> Pesan berhasil dikirim! Kami akan menghubungi Anda segera.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Informasi Kontak</h3>
+                            
+                            <div class="contact-item mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="contact-icon bg-yellow text-dark me-3">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Alamat</h5>
+                                        <p class="mb-0">Jl. Warung Ampel<br>
+                                        Cikarang Pusat, Jawa Barat<br>
+                                        Indonesia 60241</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="contact-icon bg-yellow text-dark me-3">
+                                        <i class="bi bi-telephone-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Telepon</h5>
+                                        <p class="mb-0">+62 819-0807-4938<br>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="contact-icon bg-yellow text-dark me-3">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Email</h5>
+                                        <p class="mb-0">aprasetya709@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="contact-icon bg-yellow text-dark me-3">
+                                        <i class="bi bi-clock-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Jam Operasional</h5>
+                                        <p class="mb-0">Senin - Jumat: 08:00 - 17:00<br>
+                                        Sabtu: 08:00 - 13:00<br>
+                                        Minggu: Tutup</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-media mt-4">
+                                <h5 class="mb-3">Ikuti Kami</h5>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="social-link bg-yellow text-dark">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    <a href="#" class="social-link bg-yellow text-dark">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                    <a href="#" class="social-link bg-yellow text-dark">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="social-link bg-yellow text-dark">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="map-placeholder bg-light d-flex align-items-center justify-content-center" style="height: 400px;">
+                                <div class="text-center">
+                                    <i class="bi bi-geo-alt display-1 text-orange mb-3"></i>
+                                    <h4>Lokasi Kami</h4>
+                                    <p class="text-muted">Jl. wWarung Ampel, Sukamahi, Kec. Cikarang Pusat, Kabupaten Bekasi, Jawa Barat</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-building"></i> Mitra Usaha</h5>
+                    <p>Jual & Sewa Scaffolding Terpercaya</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 Mitra Usaha. All rights reserved.</p>
+                    <div class="social-icons">
+                        <i class="bi bi-facebook me-2"></i>
+                        <i class="bi bi-instagram me-2"></i>
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

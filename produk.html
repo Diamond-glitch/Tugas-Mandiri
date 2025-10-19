@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Mitra Usaha</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-orange">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-building"></i> Mitra Usaha
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-4">
+        <div class="container">
+            <h1 class="fw-bold text-white mb-0">Produk Kami</h1>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h2>Scaffolding untuk Dijual</h2>
+                </div>
+                <div class="col-md-6 text-end">
+                    <button class="btn btn-yellow" onclick="filterProducts('jual')">Semua</button>
+                    <button class="btn btn-outline-yellow" onclick="filterProducts('jual')">Jual</button>
+                    <button class="btn btn-outline-yellow" onclick="filterProducts('sewa')">Sewa</button>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-4 product-item" data-type="jual">
+                    <div class="card h-100 product-card-hover">
+                        <div class="card-body p-4">
+                            <div class="product-badge bg-yellow text-dark mb-3">DIJUAL</div>
+                            <img src="picture/cuplock.jpeg" class="product display-1 text-orange mb-3">
+                            <h5 class="card-title">Scaffolding Ringlock 2.5m</h5>
+                            <p class="card-text">Scaffolding sistem ringlock dengan tinggi 2.5 meter, cocok untuk proyek menengah hingga besar.</p>
+                            <div class="product-details mb-3">
+                                <p class="mb-1"><i class="bi bi-ruler"></i> Tinggi: 2.5 meter</p>
+                                <p class="mb-1"><i class="bi bi-gear"></i> Material: Baja</p>
+                                <p class="mb-1"><i class="bi bi-shield-check"></i> SNI Certified</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-orange mb-0">Rp 850.000</span>
+                                <button class="btn btn-yellow" onclick="addToCart('Ringlock 2.5m', 850000)">
+                                    <i class="bi bi-cart-plus"></i> Beli
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-4 product-item" data-type="jual">
+                    <div class="card h-100 product-card-hover">
+                        <div class="card-body p-4">
+                            <div class="product-badge bg-yellow text-dark mb-3">DIJUAL</div>
+                            <img src="picture/cuplock.jpeg" class="product display-1 text-orange mb-3">
+                            <h5 class="card-title">Scaffolding Cuplock 2m</h5>
+                            <p class="card-text">Scaffolding sistem cuplock dengan tinggi 2 meter, praktis dan mudah dipasang.</p>
+                            <div class="product-details mb-3">
+                                <p class="mb-1"><i class="bi bi-ruler"></i> Tinggi: 2 meter</p>
+                                <p class="mb-1"><i class="bi bi-gear"></i> Material: Baja</p>
+                                <p class="mb-1"><i class="bi bi-shield-check"></i> SNI Certified</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-orange mb-0">Rp 750.000</span>
+                                <button class="btn btn-yellow" onclick="addToCart('Cuplock 2m', 750000)">
+                                    <i class="bi bi-cart-plus"></i> Beli
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-4 product-item" data-type="jual">
+                    <div class="card h-100 product-card-hover">
+                        <div class="card-body p-4">
+                            <div class="product-badge bg-yellow text-dark mb-3">DIJUAL</div>
+                           <img src="picture/cuplock.jpeg" class="product display-1 text-orange mb-3">
+                            <h5 class="card-title">Scaffolding Frame 1.8m</h5>
+                            <p class="card-text">Scaffolding frame dengan tinggi 1.8 meter, ideal untuk proyek rumah dan renovasi.</p>
+                            <div class="product-details mb-3">
+                                <p class="mb-1"><i class="bi bi-ruler"></i> Tinggi: 1.8 meter</p>
+                                <p class="mb-1"><i class="bi bi-gear"></i> Material: Baja</p>
+                                <p class="mb-1"><i class="bi bi-shield-check"></i> SNI Certified</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-orange mb-0">Rp 650.000</span>
+                                <button class="btn btn-yellow" onclick="addToCart('Frame 1.8m', 650000)">
+                                    <i class="bi bi-cart-plus"></i> Beli
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-4 product-item" data-type="sewa">
+                    <div class="card h-100 product-card-hover">
+                        <div class="card-body p-4">
+                            <div class="product-badge bg-orange text-white mb-3">DISEWA</div>
+                            <img src="picture/cuplock.jpeg" class="product display-1 text-orange mb-3">
+                            <h5 class="card-title">Scaffolding Ringlock 2.5m (Sewa)</h5>
+                            <p class="card-text">Sewa scaffolding ringlock untuk proyek jangka pendek. Minimal sewa 1 bulan.</p>
+                            <div class="product-details mb-3">
+                                <p class="mb-1"><i class="bi bi-ruler"></i> Tinggi: 2.5 meter</p>
+                                <p class="mb-1"><i class="bi bi-calendar"></i> Minimal: 1 bulan</p>
+                                <p class="mb-1"><i class="bi bi-shield-check"></i> SNI Certified</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-orange mb-0">Rp 150.000/bulan</span>
+                                <button class="btn btn-orange" onclick="rentProduct('Ringlock 2.5m Sewa', 150000)">
+                                    <i class="bi bi-calendar-check"></i> Sewa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-md-4 product-item" data-type="sewa">
+                    <div class="card h-100 product-card-hover">
+                        <div class="card-body p-4">
+                            <div class="product-badge bg-orange text-white mb-3">DISEWA</div>
+                           <img src="picture/cuplock.jpeg" class="product display-1 text-orange mb-3">
+                            <h5 class="card-title">Scaffolding Cuplock 2m (Sewa)</h5>
+                            <p class="card-text">Sewa scaffolding cuplock untuk proyek menengah. Minimal sewa 1 bulan.</p>
+                            <div class="product-details mb-3">
+                                <p class="mb-1"><i class="bi bi-ruler"></i> Tinggi: 2 meter</p>
+                                <p class="mb-1"><i class="bi bi-calendar"></i> Minimal: 1 bulan</p>
+                                <p class="mb-1"><i class="bi bi-shield-check"></i> SNI Certified</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-orange mb-0">Rp 120.000/bulan</span>
+                                <button class="btn btn-orange" onclick="rentProduct('Cuplock 2m Sewa', 120000)">
+                                    <i class="bi bi-calendar-check"></i> Sewa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-md-4 product-item" data-type="sewa">
+                    <div class="card h-100 product-card-hover">
+                        <div class="card-body p-4">
+                            <div class="product-badge bg-orange text-white mb-3">DISEWA</div>
+                            <img src="picture/cuplock.jpeg" class="product display-1 text-orange mb-3">
+                            <h5 class="card-title">Scaffolding Frame 1.8m (Sewa)</h5>
+                            <p class="card-text">Sewa scaffolding frame untuk proyek rumah. Minimal sewa 2 minggu.</p>
+                            <div class="product-details mb-3">
+                                <p class="mb-1"><i class="bi bi-ruler"></i> Tinggi: 1.8 meter</p>
+                                <p class="mb-1"><i class="bi bi-calendar"></i> Minimal: 2 minggu</p>
+                                <p class="mb-1"><i class="bi bi-shield-check"></i> SNI Certified</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-orange mb-0">Rp 100.000/bulan</span>
+                                <button class="btn btn-orange" onclick="rentProduct('Frame 1.8m Sewa', 100000)">
+                                    <i class="bi bi-calendar-check"></i> Sewa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div id="cartSummary" class="mt-5" style="display: none;">
+                <div class="card bg-light">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">Ringkasan Keranjang</h4>
+                        <div id="cartItems"></div>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <h5>Total: <span id="cartTotal" class="text-orange">Rp 0</span></h5>
+                            <button class="btn btn-yellow btn-lg" onclick="checkout()">
+                                <i class="bi bi-cart-check"></i> Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-building"></i> Mitra Usaha</h5>
+                    <p>Jual & Sewa Scaffolding Terpercaya</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 Mitra Usaha. All rights reserved.</p>
+                    <div class="social-icons">
+                        <i class="bi bi-facebook me-2"></i>
+                        <i class="bi bi-instagram me-2"></i>
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
